@@ -212,12 +212,12 @@ birthday. This version is deliberately the gift, done properly, on time.
 
 **Still to do:**
 - [ ] Upload Sutaki's video + the wishes video to YouTube as **Unlisted**, paste the two ids
+- [ ] Paste Sutaki's funny video id into the "you need to laugh" envelope
 - [ ] Write your own letter (`Shun`) — replace the placeholder
+- [ ] Write the three "open when" letters you claimed: **miss home**, **miss us**, **proud of yourself**
 - [ ] Get Sutaki's letter — replace the placeholder
 - [ ] Get Ko Aung Thukha's letter — replace the placeholder
-- [ ] Replace the 7 remaining placeholder "open when" letters (the 3 from Phyu are real)
 - [ ] Upload photos + add them to `photos:`, then set `emptySlots: 0`
-- [ ] Add photos inside individual letters if you want them
 - [ ] Paste the YouTube ids for the wave to earth songs
 - [ ] Check Andy's Burmese renders correctly on your phone (see below)
 - [ ] Deploy to Cloudflare Pages

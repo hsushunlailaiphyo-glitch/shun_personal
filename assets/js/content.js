@@ -180,8 +180,11 @@ const CONTENT = {
     },
     {
       // ✏️ REPLACE — this one is still a placeholder
-      from: "Tho",
-      role: "ko aung thukha",
+      from: "Ko Aung Thukha",
+      role: "your boyfriend",
+      // `eyebrow` overrides the little line above the name in the opened
+      // letter. Without it, it would read "a letter from Ko Aung Thukha".
+      eyebrow: "a letter from your boyfriend",
       preview: "Of all the ordinary days, the best ones are the ones with you in them.",
       body: [
         "Nann Wai,",
@@ -205,8 +208,12 @@ const CONTENT = {
      ------------------------------------------------------------------ */
 
   openWhenTitle: "open when...",
-  openWhenLede: "Ten sealed letters. Don't read them all today. Save them for the days that need them.",
+  openWhenLede: "Seven sealed letters. Don't read them all today. Save them for the days that need them.",
   openWhenFoot: "we'll keep adding to these. it's never going to be finished.",
+
+  /* An "open when" can also hold a video — add `youtubeId` to it, the same
+     way as the videos section. It plays inside the letter when she opens it.
+     They can take `photos: [...]` too. */
 
   openWhen: [
     {
@@ -251,40 +258,7 @@ const CONTENT = {
       signature: "phyu phyu 🫶",
     },
     {
-      // ✏️ REPLACE — placeholder
-      id: "tired",
-      title: "you are tired",
-      body: [
-        "Stop. Whatever it is, it can wait until tomorrow.",
-        "You do not have to earn rest. You are allowed to be tired without having a good enough reason for it.",
-        "Drink some water. Put the phone down after this. We'll still be here in the morning.",
-      ],
-      signature: "shun",
-    },
-    {
-      // ✏️ REPLACE — placeholder
-      id: "cantsleep",
-      title: "you can't sleep",
-      body: [
-        "Nothing has to be solved tonight. Whatever your brain is chewing on at this hour, it will be a smaller thing in daylight. It always is.",
-        "Put on something soft. Let the room be dark. You are safe.",
-        "Goodnight, Nann Wai.",
-      ],
-      signature: "shun",
-    },
-    {
-      // ✏️ REPLACE — placeholder
-      id: "missus",
-      title: "you miss us",
-      body: [
-        "We miss you too. Constantly, and usually at inconvenient times.",
-        "Distance hasn't done anything to this. We are exactly where you left us.",
-        "Scroll up. Look at the photos. Then come back and tell us you miss us — we like hearing it.",
-      ],
-      signature: "shun, sutaki, phyu & andy",
-    },
-    {
-      // ✏️ REPLACE — placeholder
+      // ✏️ SHUN IS WRITING THIS ONE
       id: "misshome",
       title: "you miss home",
       body: [
@@ -292,10 +266,21 @@ const CONTENT = {
         "You carry it with you anyway — in how you talk, how you feed people, how you love.",
         "Home is not somewhere behind you. Some of it is right here reading this with you.",
       ],
-      signature: "all of us",
+      signature: "shun",
     },
     {
-      // ✏️ REPLACE — placeholder
+      // ✏️ SHUN IS WRITING THIS ONE
+      id: "missus",
+      title: "you miss us",
+      body: [
+        "We miss you too. Constantly, and usually at inconvenient times.",
+        "Distance hasn't done anything to this. We are exactly where you left us.",
+        "Scroll up. Look at the photos. Then come back and tell us you miss us — we like hearing it.",
+      ],
+      signature: "shun",
+    },
+    {
+      // ✏️ SHUN IS WRITING THIS ONE
       id: "proud",
       title: "you are proud of yourself",
       body: [
@@ -303,32 +288,19 @@ const CONTENT = {
         "You are so quick to make yourself small about your own wins, so this letter is here to make you sit in it for a minute.",
         "You did that. Nobody did it for you.",
       ],
-      signature: "all of us",
+      signature: "shun",
     },
     {
-      // ✏️ REPLACE — placeholder
+      // ✏️ PASTE SUTAKI'S VIDEO ID INTO youtubeId BELOW
       id: "laugh",
       title: "you need to laugh",
+      youtubeId: "",
       body: [
-        "Think about the most unhinged thing one of us has ever done in front of you.",
-        "You already smiled, didn't you.",
-        "Okay — now go find one of us and demand entertainment. We're contractually obligated.",
+        "No letter for this one. Just press play.",
       ],
       signature: "sutaki",
     },
-    {
-      // ✏️ REPLACE — placeholder
-      id: "doubt",
-      title: "you doubt yourself",
-      body: [
-        "The voice telling you you're not good enough has been lying to you for years and it has never once been right.",
-        "Look at what you've built. Look at who chose to stay near you. That is the evidence. The doubt is not.",
-        "We are certain about you, even on the days you aren't.",
-      ],
-      signature: "all of us",
-    },
   ],
-
 
   /* ------------------------------------------------------------------
      7. PHOTOS  (the gallery)

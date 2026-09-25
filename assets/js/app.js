@@ -270,12 +270,14 @@
       if (!b) return;
       var l = C.letters[+b.dataset.letter];
       openReader({
-        eyebrow: "a letter from " + (l.from || ""),
+        eyebrow: l.eyebrow || ("a letter from " + (l.from || "")),
         title: l.from || "",
         body: l.body,
         signature: l.signature || l.from,
         lang: l.lang,
-        photos: l.photos
+        photos: l.photos,
+        youtubeId: l.youtubeId,
+        file: l.file
       });
     });
 
@@ -312,6 +314,8 @@
         signature: o.signature,
         lang: o.lang,
         photos: o.photos,
+        youtubeId: o.youtubeId,
+        file: o.file,
         meta: "you first opened this on " + prettyDate(+when)
       });
     });
@@ -463,6 +467,17 @@
     var rb = $("reader-body");
     rb.innerHTML = paras(o.body);
     rb.className = "reader-body" + (o.lang === "my" ? " is-my" : "");
+
+    var rv = $("reader-video");
+    if (o.youtubeId) {
+      rv.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' +
+        encodeURIComponent(o.youtubeId) + '?rel=0" title="' + esc(o.title || "") +
+        '" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+    } else if (o.file) {
+      rv.innerHTML = '<video src="' + esc(o.file) + '" controls playsinline></video>';
+    } else {
+      rv.innerHTML = "";
+    }
 
     var rp = $("reader-photos");
     var pics = (o.photos || []).filter(Boolean);
