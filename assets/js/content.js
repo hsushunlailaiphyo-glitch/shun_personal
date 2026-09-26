@@ -172,6 +172,9 @@ const CONTENT = {
         "And at the bottom of this page are the two songs that make me think of you.",
       ],
       signature: "shun",
+      photos: [
+        "photos/nann-shun-1.jpg",
+      ],
     },
     {
       // ✏️ REPLACE — this one is still a placeholder
