@@ -177,6 +177,7 @@ const CONTENT = {
       signature: "shun",
       photos: [
         "photos/nann-shun-1.jpg",
+        "photos/nann-shun-2.webp",
       ],
     },
     {
