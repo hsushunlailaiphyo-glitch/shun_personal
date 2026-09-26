@@ -1068,7 +1068,16 @@ img { max-width: 100%; display: block; }
   border-radius: 14px;
   border: 1px solid var(--line);
 }
-.reader-photos.two { grid-template-columns: 1fr 1fr; }
+.reader-photos.two   { grid-template-columns: 1fr 1fr; }
+.reader-photos.three { grid-template-columns: repeat(3, 1fr); }
+/* in a multi-column set, crop to a common shape so the row lines up */
+.reader-photos.two img,
+.reader-photos.three img { aspect-ratio: 3 / 4; object-fit: cover; }
+
+@media (max-width: 640px) {
+  .reader-photos.three { grid-template-columns: 1fr; }
+  .reader-photos.three img { aspect-ratio: auto; }
+}
 
 /* ============ Burmese ============ */
 .is-my {

@@ -184,20 +184,23 @@ const CONTENT = {
       signature: "sutaki",
     },
     {
-      // ✏️ REPLACE — this one is still a placeholder
       from: "Ko Aung Thukha",
       role: "your boyfriend",
       // `eyebrow` overrides the little line above the name in the opened
       // letter. Without it, it would read "a letter from Ko Aung Thukha".
       eyebrow: "a letter from your boyfriend",
-      preview: "Of all the ordinary days, the best ones are the ones with you in them.",
+      preview: "Happy Birthday to the person who makes my world so much brighter!",
       body: [
-        "Nann Wai,",
-        "Of all the ordinary days, the best ones are the ones with you in them.",
-        "Happy birthday, my love. Here's to another year of your laugh, your camera, and your terrible music timing.",
-        "I'm proud of you. Always.",
+        "Happy Birthday to the person who makes my world so much brighter!",
+        "I'm so lucky to have you in my life and to share all these memories with you.",
+        "Love you always my Nann Wai Lay!❤️",
       ],
       signature: "ko aung thukha",
+      photos: [
+        "photos/nann-thukha-1.webp",
+        "photos/nann-thukha-2.webp",
+        "photos/nann-thukha-3.webp",
+      ],
     },
   ],
 

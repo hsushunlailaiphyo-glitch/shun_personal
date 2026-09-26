@@ -481,7 +481,8 @@
 
     var rp = $("reader-photos");
     var pics = (o.photos || []).filter(Boolean);
-    rp.className = "reader-photos" + (pics.length === 2 ? " two" : "");
+    rp.className = "reader-photos" +
+      (pics.length === 2 ? " two" : pics.length === 3 ? " three" : "");
     rp.innerHTML = pics.map(function (src) {
       return '<img src="' + esc(src) + '" alt="" loading="lazy">';
     }).join("");
