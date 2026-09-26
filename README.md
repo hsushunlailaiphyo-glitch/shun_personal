@@ -209,12 +209,13 @@ birthday. This version is deliberately the gift, done properly, on time.
 - [x] Phyu's birthday letter
 - [x] Phyu's three "open when" letters (lonely / sad / anxious)
 - [x] Andy's letter (Burmese)
+- [x] Shun's birthday letter
+- [x] Shun's three "open when" letters (miss home / miss us / proud of yourself)
 
 **Still to do:**
+- [ ] Name Shun's two songs — they're first in the playlist as "for you, no. 1 / 2". Song 2 still needs its YouTube id
 - [ ] Upload Sutaki's video + the wishes video to YouTube as **Unlisted**, paste the two ids
 - [ ] Paste Sutaki's funny video id into the "you need to laugh" envelope
-- [ ] Write your own letter (`Shun`) — replace the placeholder
-- [ ] Write the three "open when" letters you claimed: **miss home**, **miss us**, **proud of yourself**
 - [ ] Get Sutaki's letter — replace the placeholder
 - [ ] Get Ko Aung Thukha's letter — replace the placeholder
 - [ ] Upload photos + add them to `photos:`, then set `emptySlots: 0`

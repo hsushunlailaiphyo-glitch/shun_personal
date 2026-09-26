@@ -152,16 +152,21 @@ const CONTENT = {
       signature: "andy",
     },
     {
-      // ✏️ REPLACE — this one is still a placeholder
       from: "Shun",
       role: "your friend",
-      preview: "I have wanted to tell you these things for a long time, and a birthday felt like a good excuse.",
+      preview: "You taught me what love is. I used to push people away — you changed the way I think, and I freaking love it.",
       body: [
-        "Nann Wai,",
-        "I have wanted to tell you these things for a long time, and a birthday felt like a good excuse to finally do it properly.",
-        "You are the person who notices. When someone in our group goes quiet, you are always the first one to ask why. I don't think you know how rare that is.",
-        "Thank you for every time you carried something heavy without telling anyone. I hope this year is lighter for you.",
-        "Happy birthday.",
+        "Happy birthday, dearest Nann Wai.",
+        "Thank you for being born, and for being my friend. I have never met anyone like you. You have changed a lot in me — more than you know, and all of it for the better.",
+        "First, you taught me what love is. I used to push people away. I never said what I felt, because I was afraid that showing love, expressing it, would be read as weakness. You changed the way I think. I became expressive because of you — and I love it. I freaking love it. Thank you for teaching me what love is.",
+        "Thank you for always standing up for me. For us. So much of my courage came from you.",
+        "You do so much for the people you love, and it is inspiring. But you take far less care of yourself than you give to everyone else — you keep so much room for others and so little for yourself. This year I want you to love yourself and look after yourself as much as you look after us. And I am willing to take care of you, because I love you.",
+        "Your small actions and your words mean more to me than you realise. You gave me confidence. You made me feel loved. With you, I learned what it feels like to be treated right. You make me feel special.",
+        "Thank you for everything you have done for me, Nann.",
+        "I hope you have a lovely birthday. And I want another ten years with you. Twenty. Fifty. Until we grow old and become grandmothers together — let's spend the rest of our lives side by side.",
+        "This year, Sutaki and I chose something for you together: a photo printer. You love photography, and now you have your digital camera, so we thought it was the perfect thing. Please take many more memories of us with that camera — and then print them, so we can hold them, not only scroll them.",
+        "Love you, Nann.",
+        "And at the bottom of this page are the two songs that make me think of you.",
       ],
       signature: "shun",
     },
@@ -258,35 +263,45 @@ const CONTENT = {
       signature: "phyu phyu 🫶",
     },
     {
-      // ✏️ SHUN IS WRITING THIS ONE
       id: "misshome",
       title: "you miss home",
       body: [
-        "It's allowed to hurt. Missing home isn't weakness and it isn't ungratefulness for where you are.",
-        "You carry it with you anyway — in how you talk, how you feed people, how you love.",
-        "Home is not somewhere behind you. Some of it is right here reading this with you.",
+        "Your sister, your dad and you, driving together.",
+        "Your mum in the back, probably lecturing you both on how to drive.",
+        "The safe place where you are loved.",
+        "I can picture your sister drawing more pictures of you, while you take more pictures of her.",
+        "I'm not officially a member of your family, but as someone who is close to your home — I understand this one, Nann. We are more than 2,500 miles away. We can't teleport to the people we love, however much we want to, and that is genuinely sad.",
+        "But look at us. We are trying our best, and we are living independently. For someone as young as 24, you are thriving here.",
+        "And you are never alone. You have me. You have us. Whenever you miss home, whenever the distance feels too wide, I will be here. Call me. I'll pick up.",
+        "Love,",
       ],
       signature: "shun",
     },
     {
-      // ✏️ SHUN IS WRITING THIS ONE
       id: "missus",
       title: "you miss us",
       body: [
-        "We miss you too. Constantly, and usually at inconvenient times.",
-        "Distance hasn't done anything to this. We are exactly where you left us.",
-        "Scroll up. Look at the photos. Then come back and tell us you miss us — we like hearing it.",
+        "I guess you're opening this because you miss us.",
+        "You could be far away from us right now, or you could be close and still missing us. Either way — when you open this, I can tell you for certain that I miss you too. Probably I missed you long before you opened this letter, Nann.",
+        "When I listen to wave to earth, you appear in my mind.\nWhen I'm feeling brave, I remember the courage you planted in me.\nWhen I find a peaceful café, I want to go there with you.\nWhen I eat something sweet, I end up craving your homemade ကျောက်ကျော — and whatever I'm eating never quite satisfies me, because it isn't as good as yours.",
+        "Near or far, our hearts will always be together.",
+        "I'm glad you opened this letter. On the other side of the wall, I'm thinking of you more than you know.",
+        "Love,",
       ],
       signature: "shun",
     },
     {
-      // ✏️ SHUN IS WRITING THIS ONE
       id: "proud",
       title: "you are proud of yourself",
       body: [
-        "GOOD. Say it out loud. Tell somebody. Tell all of us.",
-        "You are so quick to make yourself small about your own wins, so this letter is here to make you sit in it for a minute.",
-        "You did that. Nobody did it for you.",
+        "Yayyy!! Yippie XD",
+        "Congratulations, Nann.",
+        "Did something good happen? I reckon you're opening this in a proud moment — and if you are, come and tell us in the group chat, or DM me directly. I miss you, and I want to hear you be proud of yourself. Yayyy.",
+        "You don't have to win a big prize or change your whole life to be proud of yourself. You know that, right?",
+        "You can be proud of yourself for eating a warm meal. For taking care of yourself. For sleeping enough hours. All of it counts.",
+        "But really — I want to hear how you feel. Come and tell me what's new.",
+        "I'll be waiting, Nann!",
+        "Love,",
       ],
       signature: "shun",
     },
@@ -342,6 +357,10 @@ const CONTENT = {
   musicLede: "Press play and leave it on while you read. You know these already.",
 
   music: [
+    // Shun's two songs for her. ✏️ Put the real song names in `title` —
+    // the YouTube player shows the true title once it plays either way.
+    { title: "for you, no. 1", artist: "chosen by shun", youtubeId: "P1V6cQJpbc4" },
+    { title: "for you, no. 2", artist: "chosen by shun", youtubeId: "" },
     { title: "seasons",             artist: "wave to earth", youtubeId: "" },
     { title: "bad",                 artist: "wave to earth", youtubeId: "" },
     { title: "sunny days sleeping", artist: "wave to earth", youtubeId: "" },
