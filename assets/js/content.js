@@ -185,6 +185,9 @@ const CONTENT = {
         "I'm so glad you're mine to grow old with.",
       ],
       signature: "sutaki",
+      photos: [
+        "photos/nann-sutaki-1.webp",
+      ],
     },
     {
       from: "Ko Aung Thukha",
