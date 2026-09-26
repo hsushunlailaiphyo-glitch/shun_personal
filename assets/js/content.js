@@ -194,6 +194,7 @@ const CONTENT = {
       signature: "sutaki",
       photos: [
         "photos/nann-sutaki-1.webp",
+        "photos/nann-sutaki-2.webp",
       ],
     },
     {
