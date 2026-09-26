@@ -99,9 +99,16 @@ videos: [
 Until you paste the ids, those slots show a soft "video coming soon" frame
 rather than anything broken.
 
-> **Small video (under ~40MB)?** You *can* upload it to a `videos` folder in
-> the repo and write `{ title: "...", file: "videos/sutaki.mp4" }` instead.
-> YouTube is still easier and faster for her.
+> **Hosting a video in the repo instead.** Sutaki's message is done this
+> way — it lives in `videos/` and is written as
+> `{ title: "...", file: "videos/sutaki-message.mp4", poster: "videos/sutaki-message-poster.jpg" }`.
+>
+> Two rules if you add another this way:
+> 1. **Under 25MB.** Cloudflare Pages rejects any single file above that.
+> 2. **It must be H.264 MP4, not .MOV.** iPhones record HEVC in a .MOV
+>    container, which will not play in Chrome or on most Android phones.
+>    Sutaki's was converted before it went in. If you have another .MOV,
+>    send it here rather than committing it, and I'll convert it.
 
 ---
 
@@ -213,11 +220,12 @@ birthday. This version is deliberately the gift, done properly, on time.
 - [x] Shun's three "open when" letters (miss home / miss us / proud of yourself)
 - [x] Ko Aung Thukha's letter, with three photos of the two of them
 - [x] A photo in every letter
-- [x] Five photos in the "us, on film" gallery
+- [x] Ten photos in the "us, on film" gallery
+- [x] Sutaki's video message, hosted in the repo
 
 **Still to do:**
 - [ ] Name Shun's two songs — they're first in the playlist as "for you, no. 1 / 2". Song 2 still needs its YouTube id
-- [ ] Upload Sutaki's video + the wishes video to YouTube as **Unlisted**, paste the two ids
+- [ ] Upload the wishes video to YouTube as **Unlisted**, paste the id
 - [ ] Paste Sutaki's funny video id into the "you need to laugh" envelope
 - [ ] Get Sutaki's letter — replace the placeholder
 - [ ] Add more gallery photos if you want, and swap the placeholder captions for real ones

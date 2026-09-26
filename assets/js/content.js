@@ -84,8 +84,14 @@ const CONTENT = {
      the site slow to open. YouTube streams it instantly on any phone,
      for free, and handles her data connection for her.
 
-     If a video is small (under ~40MB) you CAN put it in a `videos`
-     folder instead and write:  { title: "...", file: "videos/x.mp4" },
+     Sutaki's message is hosted in the repo instead (see `videos/`), because
+     it converted down to 12MB. Cloudflare Pages refuses any single file
+     over 25MB, so that is the ceiling for a self-hosted video — anything
+     bigger has to go to YouTube.
+
+     A self-hosted video needs `file` and, ideally, `poster` (a still frame
+     shown before she presses play):
+         { title: "...", file: "videos/x.mp4", poster: "videos/x.jpg" },
      ------------------------------------------------------------------ */
 
   videosTitle: "watch this first",
@@ -95,7 +101,8 @@ const CONTENT = {
     {
       title: "a message from Sutaki",
       note: "she recorded this for you",
-      youtubeId: "",          // ✏️ paste the YouTube id here
+      file: "videos/sutaki-message.mp4",
+      poster: "videos/sutaki-message-poster.jpg",
     },
     {
       title: "our wishes",

@@ -392,8 +392,9 @@
       var inner;
       if (v.youtubeId || v.file) {
         inner = '<button class="video-frame" data-video="' + i + '" aria-label="play ' + esc(v.title) + '">' +
-                (v.youtubeId ? '<img src="https://i.ytimg.com/vi/' + encodeURIComponent(v.youtubeId) +
-                               '/hqdefault.jpg" alt="" loading="lazy">' : "") +
+                (v.poster ? '<img src="' + esc(v.poster) + '" alt="" loading="lazy">'
+                  : v.youtubeId ? '<img src="https://i.ytimg.com/vi/' + encodeURIComponent(v.youtubeId) +
+                                  '/hqdefault.jpg" alt="" loading="lazy">' : "") +
                 '<span class="video-play" aria-hidden="true">&#9654;</span></button>';
       } else {
         inner = '<div class="video-frame empty"><span>video coming soon</span></div>';
@@ -415,8 +416,9 @@
           'title="' + esc(v.title) + '" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" ' +
           'allowfullscreen></iframe></div>';
       } else if (v.file) {
-        b.outerHTML = '<div class="video-frame"><video src="' + esc(v.file) +
-          '" controls autoplay playsinline></video></div>';
+        b.outerHTML = '<div class="video-frame"><video src="' + esc(v.file) + '"' +
+          (v.poster ? ' poster="' + esc(v.poster) + '"' : "") +
+          ' controls autoplay playsinline preload="metadata"></video></div>';
       }
     });
   }
