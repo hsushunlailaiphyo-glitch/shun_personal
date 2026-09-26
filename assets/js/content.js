@@ -153,6 +153,9 @@ const CONTENT = {
         "အစစအရာရာ အဆင်ပြေပြီး\nစိတ်ရော ကိုယ်ရော ကျန်းမာ ချမ်းသာ ပါစေ ကောင်မ",
       ],
       signature: "andy",
+      photos: [
+        "photos/nann-andy-1.webp",
+      ],
     },
     {
       from: "Shun",
