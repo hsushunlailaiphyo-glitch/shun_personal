@@ -351,11 +351,16 @@ const CONTENT = {
 
   photosTitle: "us, on film",
   photosLede: "Proof. Some of these you have never seen.",
-  emptySlots: 6,
+  emptySlots: 0,
 
+  // ✏️ The captions below just describe what's in each picture — swap them
+  //    for the real memory. They show when she hovers a photo.
   photos: [
-    // ✏️ add your photos here, for example:
-    // { src: "photos/nann-01.jpg", caption: "the night we didn't sleep" },
+    { src: "photos/gallery-01.webp", caption: "the four of us" },
+    { src: "photos/gallery-02.webp", caption: "the sleepover" },
+    { src: "photos/gallery-03.webp", caption: "out, late" },
+    { src: "photos/gallery-04.webp", caption: "the cafe" },
+    { src: "photos/gallery-05.webp", caption: "5 august" },
   ],
 
 

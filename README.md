@@ -212,13 +212,15 @@ birthday. This version is deliberately the gift, done properly, on time.
 - [x] Shun's birthday letter
 - [x] Shun's three "open when" letters (miss home / miss us / proud of yourself)
 - [x] Ko Aung Thukha's letter, with three photos of the two of them
+- [x] A photo in every letter
+- [x] Five photos in the "us, on film" gallery
 
 **Still to do:**
 - [ ] Name Shun's two songs — they're first in the playlist as "for you, no. 1 / 2". Song 2 still needs its YouTube id
 - [ ] Upload Sutaki's video + the wishes video to YouTube as **Unlisted**, paste the two ids
 - [ ] Paste Sutaki's funny video id into the "you need to laugh" envelope
 - [ ] Get Sutaki's letter — replace the placeholder
-- [ ] Upload photos + add them to `photos:`, then set `emptySlots: 0`
+- [ ] Add more gallery photos if you want, and swap the placeholder captions for real ones
 - [ ] Paste the YouTube ids for the wave to earth songs
 - [ ] Check Andy's Burmese renders correctly on your phone (see below)
 - [ ] Deploy to Cloudflare Pages
