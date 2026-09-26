@@ -137,7 +137,10 @@ const CONTENT = {
         "Again, Happy Birthday 🥳 !!!!",
       ],
       signature: "phyu",
-      // photos: ["photos/phyu-1.jpg"],
+      photos: [
+        "photos/nann-phyu-1.webp",
+        "photos/nann-phyu-2.webp",
+      ],
     },
     {
       from: "Andy",
