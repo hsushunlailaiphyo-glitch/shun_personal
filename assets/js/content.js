@@ -361,6 +361,11 @@ const CONTENT = {
     { src: "photos/gallery-03.webp", caption: "out, late" },
     { src: "photos/gallery-04.webp", caption: "the cafe" },
     { src: "photos/gallery-05.webp", caption: "5 august" },
+    { src: "photos/gallery-06.webp", caption: "dressed up" },
+    { src: "photos/gallery-07.webp", caption: "the floor, again" },
+    { src: "photos/gallery-08.webp", caption: "before we went out" },
+    { src: "photos/gallery-09.webp", caption: "myanmar, 2026" },
+    { src: "photos/gallery-10.webp", caption: "campus" },
   ],
 
 
