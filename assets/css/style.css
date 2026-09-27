@@ -1073,26 +1073,21 @@ img { max-width: 100%; display: block; }
 }
 
 /* ============ photos inside a letter ============ */
+/* Full width, natural proportions, never cropped — a wide photo here can
+   carry something that must stay whole (Phyu's letter holds a Spotify code
+   that spans the frame, and a crop would make it unscannable). */
 .reader-photos {
-  display: grid;
-  gap: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
   margin-top: 2.2rem;
 }
 .reader-photos:empty { display: none; }
 .reader-photos img {
   width: 100%;
+  height: auto;
   border-radius: 14px;
   border: 1px solid var(--line);
-}
-.reader-photos.two   { grid-template-columns: 1fr 1fr; }
-.reader-photos.three { grid-template-columns: repeat(3, 1fr); }
-/* in a multi-column set, crop to a common shape so the row lines up */
-.reader-photos.two img,
-.reader-photos.three img { aspect-ratio: 3 / 4; object-fit: cover; }
-
-@media (max-width: 640px) {
-  .reader-photos.three { grid-template-columns: 1fr; }
-  .reader-photos.three img { aspect-ratio: auto; }
 }
 
 /* ============ Burmese ============ */
