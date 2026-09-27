@@ -150,14 +150,22 @@
       .replace(/"/g, "&quot;");
   }
 
+  // Escapes first, then turns *emphasis* and **strong** into tags. Because the
+  // escaping happens before, nothing in the letters can inject markup.
+  function inline(str) {
+    return esc(str)
+      .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+      .replace(/\*([^*]+)\*/g, "<em>$1</em>");
+  }
+
   function paras(arr) {
     return (arr || []).map(function (p) {
       var line = String(p == null ? "" : p);
       // a paragraph starting with "> " is a quoted verse
       if (line.indexOf("> ") === 0) {
-        return "<blockquote>" + esc(line.slice(2)) + "</blockquote>";
+        return "<blockquote>" + inline(line.slice(2)) + "</blockquote>";
       }
-      return "<p>" + esc(line) + "</p>";
+      return "<p>" + inline(line) + "</p>";
     }).join("");
   }
 

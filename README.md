@@ -222,18 +222,18 @@ birthday. This version is deliberately the gift, done properly, on time.
 - [x] A photo in every letter
 - [x] Ten photos in the "us, on film" gallery
 - [x] Sutaki's video message, hosted in the repo
+- [x] Sutaki's letter
+- [x] All five letters real, ordered Phyu / Shun / Sutaki / Ko Aung Thukha / Andy
 
 **Still to do:**
 - [ ] Name Shun's two songs — they're first in the playlist as "for you, no. 1 / 2". Song 2 still needs its YouTube id
-- [ ] Upload the wishes video to YouTube as **Unlisted**, paste the id
-- [ ] Paste Sutaki's funny video id into the "you need to laugh" envelope
-- [ ] Get Sutaki's letter — replace the placeholder
-- [ ] Add more gallery photos if you want, and swap the placeholder captions for real ones
 - [ ] Paste the YouTube ids for the wave to earth songs
+- [ ] Add back the "you need to laugh" envelope with Sutaki's funny video
+- [ ] Add the "our wishes" video
+- [ ] Swap the gallery's placeholder captions for real ones
 - [ ] Check Andy's Burmese renders correctly on your phone (see below)
-- [ ] Deploy to Cloudflare Pages
-- [ ] Visit `?reset` on your phone afterwards so *you* see the countdown too
-- [ ] Send her the link on the 28th
+
+Every letter is now real. There are no placeholder letters left anywhere.
 
 ### One thing to check about Andy's letter
 

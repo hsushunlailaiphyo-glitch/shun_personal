@@ -879,6 +879,7 @@ img { max-width: 100%; display: block; }
 /* keeps deliberate line breaks inside a paragraph (Shun's "when I..." lines) */
 .reader-body p { margin: 0 0 1.35rem; white-space: pre-line; }
 .reader-body em { color: var(--accent); font-style: italic; }
+.reader-body strong { font-weight: 700; color: var(--accent); }
 
 /* a line beginning "> " in content.js becomes a quoted verse */
 .reader-body blockquote {

@@ -104,11 +104,6 @@ const CONTENT = {
       file: "videos/sutaki-message.mp4",
       poster: "videos/sutaki-message-poster.jpg",
     },
-    {
-      title: "our wishes",
-      note: "all of us, saying it out loud",
-      youtubeId: "",          // ✏️ paste the YouTube id here
-    },
   ],
 
 
@@ -150,21 +145,6 @@ const CONTENT = {
       ],
     },
     {
-      from: "Andy",
-      role: "your friend",
-      lang: "my",
-      preview: "ငါ့ဘဝမှာ သူငယ်ချင်းလို့ပြောရင် ဒီလောက်နဲ့ ပြည့်စုံပြီလို့ ဆိုရလောက်တဲ့ သူငယ်ချင်းမျိုး",
-      body: [
-        "Happy Birthday ချစ်တုံး",
-        "ငါ့ဘဝမှာ သူငယ်ချင်းလို့ပြောရင်\nသူကတော့ ဒါကောင်းတယ်\nဒါမကောင်းဘူး ဆိုတာမျိုး မရှိ\nဒီလောက်နဲ့ ပြည့်စုံပြီလို့\nဆိုရလောက်တဲ့ သူငယ်ချင်းမျိုးအနေနဲ့\nဘဝထဲ ဝင်လာပေးလို့ ကျေးဇူး👉🏼👈🏼",
-        "အစစအရာရာ အဆင်ပြေပြီး\nစိတ်ရော ကိုယ်ရော ကျန်းမာ ချမ်းသာ ပါစေ ကောင်မ",
-      ],
-      signature: "andy",
-      photos: [
-        "photos/nann-andy-1.webp",
-      ],
-    },
-    {
       from: "Shun",
       role: "your friend",
       preview: "You taught me what love is. I used to push people away — you changed the way I think, and I freaking love it.",
@@ -193,17 +173,33 @@ const CONTENT = {
       ],
     },
     {
-      // ✏️ REPLACE — this one is still a placeholder
       from: "Sutaki",
       role: "your friend",
-      preview: "Happy birthday to the one who keeps all of us together without ever making it look like work.",
+      preview: "I still love you, and I don't think I can ever hate you. No matter how many times we fight, I will always love you.",
       body: [
-        "Nann Wai,",
-        "Happy birthday to the one who keeps all of us together without ever making it look like work.",
-        "You have this way of making people feel like they arrived somewhere safe. I hope this year gives you back everything you've been quietly giving away.",
-        "I'm so glad you're mine to grow old with.",
+        "Hey Nan,",
+        "Happy birthday, my princess. ❤️",
+        "I know we had some problems and there were times when we didn't get along well. We fought, we misunderstood each other, and sometimes things were difficult between us. But I want you to know one thing: *I still love you, and I don't think I can ever hate you.* So please don't ever worry that I won't love you anymore. No matter how many times we fight, I will always love you.",
+        "I'm always so glad that we met at this university, and I'm really glad that I got to become your friend. You're always cooking for us, and you're always asking me, *“What do you want to eat?”* Those little things mean more to me than you probably realize.",
+        "Do you remember that night before I was going to Tokyo?",
+        "I was completely panicking and overwhelmed because I had to pack my suitcase, and as usual, I had prepared almost nothing until the last minute. I had so much to do before the trip, and even after going to Tokyo, I still had classes and so much homework. At that time, I really felt like everything was falling apart.",
+        "And you were the one who came to my house and helped me pack.",
+        "You probably don't know how much that meant to me.",
+        "You told me that I was hardworking, and somehow, you could see through the person I was pretending to be. I was always pretending that I was fine, but honestly, I was so fucking weak that night. I was holding everything inside, and then you said those kind words to me.",
+        "I still remember crying in your arms that night.",
+        "*That was one of the moments when I truly realized how much I loved you as my friend.*",
+        "There are so many other memories between us that I could never fit them all into one letter. I know I don't always show my love the way you do. I'm usually the quiet one when it comes to these things. Sometimes I don't say much, and sometimes I probably don't show you how much I appreciate you.",
+        "But I want you to know that *I love you.*",
+        "Even when we fight, even when we're annoyed with each other, I will always care about you. And if I ever hurt you, I'm always sorry. I never want you to think that your presence in my life doesn't matter to me, because it really does.",
+        "I can be the youngest child in our group, and you guys spoil me so much. I honestly feel like so much of the luck I've had since coming to this university is because of the people I met here — and you're one of the biggest parts of that.",
+        "Thank you for always protecting me from people.\nThank you for always taking care of me.\nThank you for always asking me what I want to eat.\nThank you for seeing the real me, even when I was pretending that everything was okay.",
+        "And I don't always know how to show my love to you, so I decided to write it instead.",
+        "I want to write you a letter again and again on every birthday, just so you never forget:",
+        "**I love you.\nI still love you.\nAnd I will keep loving you.**",
+        "Happy birthday, Nan. ❤️",
+        "I'm really, really lucky that I met you.",
       ],
-      signature: "sutaki",
+      signature: "love, sutaki",
       photos: [
         "photos/nann-sutaki-1.webp",
         "photos/nann-sutaki-2.webp",
@@ -228,6 +224,21 @@ const CONTENT = {
         "photos/nann-thukha-3.webp",
       ],
     },
+    {
+      from: "Andy",
+      role: "your friend",
+      lang: "my",
+      preview: "ငါ့ဘဝမှာ သူငယ်ချင်းလို့ပြောရင် ဒီလောက်နဲ့ ပြည့်စုံပြီလို့ ဆိုရလောက်တဲ့ သူငယ်ချင်းမျိုး",
+      body: [
+        "Happy Birthday ချစ်တုံး",
+        "ငါ့ဘဝမှာ သူငယ်ချင်းလို့ပြောရင်\nသူကတော့ ဒါကောင်းတယ်\nဒါမကောင်းဘူး ဆိုတာမျိုး မရှိ\nဒီလောက်နဲ့ ပြည့်စုံပြီလို့\nဆိုရလောက်တဲ့ သူငယ်ချင်းမျိုးအနေနဲ့\nဘဝထဲ ဝင်လာပေးလို့ ကျေးဇူး👉🏼👈🏼",
+        "အစစအရာရာ အဆင်ပြေပြီး\nစိတ်ရော ကိုယ်ရော ကျန်းမာ ချမ်းသာ ပါစေ ကောင်မ",
+      ],
+      signature: "andy",
+      photos: [
+        "photos/nann-andy-1.webp",
+      ],
+    },
   ],
 
 
@@ -242,7 +253,7 @@ const CONTENT = {
      ------------------------------------------------------------------ */
 
   openWhenTitle: "open when...",
-  openWhenLede: "Seven sealed letters. Don't read them all today. Save them for the days that need them.",
+  openWhenLede: "Six sealed letters. Don't read them all today. Save them for the days that need them.",
   openWhenFoot: "we'll keep adding to these. it's never going to be finished.",
 
   /* An "open when" can also hold a video — add `youtubeId` to it, the same
@@ -334,16 +345,6 @@ const CONTENT = {
       ],
       signature: "shun",
     },
-    {
-      // ✏️ PASTE SUTAKI'S VIDEO ID INTO youtubeId BELOW
-      id: "laugh",
-      title: "you need to laugh",
-      youtubeId: "",
-      body: [
-        "No letter for this one. Just press play.",
-      ],
-      signature: "sutaki",
-    },
   ],
 
   /* ------------------------------------------------------------------
@@ -400,6 +401,7 @@ const CONTENT = {
     // the YouTube player shows the true title once it plays either way.
     { title: "for you, no. 1", artist: "chosen by shun", youtubeId: "P1V6cQJpbc4" },
     { title: "for you, no. 2", artist: "chosen by shun", youtubeId: "" },
+    { title: "love",                artist: "wave to earth", youtubeId: "" },
     { title: "seasons",             artist: "wave to earth", youtubeId: "" },
     { title: "bad",                 artist: "wave to earth", youtubeId: "" },
     { title: "sunny days sleeping", artist: "wave to earth", youtubeId: "" },
