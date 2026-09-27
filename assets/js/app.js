@@ -192,7 +192,7 @@
       var now = Date.now();
       var w = window_(now);
 
-      if (now >= w.start) { openSite(true); return; }
+      if (now >= w.start) { openSite(true, true); return; }
 
       var left = w.start - now;
       var d = Math.floor(left / DAY_MS);
@@ -211,12 +211,15 @@
     timer = setInterval(tick, 1000);
   }
 
-  function openSite(animate) {
+  // `remember` persists the unlock so later visits skip the gate. Previewing
+  // must NOT persist, or checking the site once would open it for good in
+  // that browser.
+  function openSite(animate, remember) {
     if (timer) { clearInterval(timer); timer = null; }
     var gate = $("gate");
     var site = $("site");
 
-    store.set("unlocked", "1");
+    if (remember) store.set("unlocked", "1");
     document.body.classList.remove("locked");
 
     if (gate && !gate.hidden && animate) {
@@ -612,8 +615,10 @@
   var alreadyOpened = store.get("unlocked") === "1";
   var itsHerBirthday = now >= w.start && now < w.end;
 
-  if (PREVIEW || alreadyOpened || itsHerBirthday) {
-    openSite(false);
+  if (PREVIEW) {
+    openSite(false, false);          // a look, not an unlock — leaves no trace
+  } else if (alreadyOpened || itsHerBirthday) {
+    openSite(false, true);
   } else {
     startGate();
   }
