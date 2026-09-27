@@ -151,7 +151,14 @@
   }
 
   function paras(arr) {
-    return (arr || []).map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("");
+    return (arr || []).map(function (p) {
+      var line = String(p == null ? "" : p);
+      // a paragraph starting with "> " is a quoted verse
+      if (line.indexOf("> ") === 0) {
+        return "<blockquote>" + esc(line.slice(2)) + "</blockquote>";
+      }
+      return "<p>" + esc(line) + "</p>";
+    }).join("");
   }
 
   function setText(id, value) {

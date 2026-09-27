@@ -133,7 +133,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans Myanmar", sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Serif JP", "Noto Sans Myanmar", sans-serif;
   font-size: 16px;
   line-height: 1.7;
   font-weight: 300;
@@ -871,7 +871,7 @@ img { max-width: 100%; display: block; }
 }
 
 .reader-body {
-  font-family: "Playfair Display", "Noto Sans Myanmar", Georgia, serif;
+  font-family: "Playfair Display", "Noto Serif JP", "Noto Sans Myanmar", Georgia, serif;
   font-size: 1.09rem;
   line-height: 1.95;
   font-weight: 500;
@@ -879,6 +879,17 @@ img { max-width: 100%; display: block; }
 /* keeps deliberate line breaks inside a paragraph (Shun's "when I..." lines) */
 .reader-body p { margin: 0 0 1.35rem; white-space: pre-line; }
 .reader-body em { color: var(--accent); font-style: italic; }
+
+/* a line beginning "> " in content.js becomes a quoted verse */
+.reader-body blockquote {
+  margin: 2rem 0;
+  padding: 0.2rem 0 0.2rem 1.4rem;
+  border-left: 2px solid var(--accent);
+  font-style: italic;
+  color: var(--muted);
+  white-space: pre-line;
+  line-height: 1.85;
+}
 
 .reader-sign {
   font-family: "Caveat", cursive;
