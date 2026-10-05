@@ -211,6 +211,7 @@ button, input { font-family: inherit; }
   line-height: 1.08; letter-spacing: -0.01em; margin: 0 0 0.9rem;
 }
 .section-lede { color: var(--muted); max-width: 48ch; margin: 0 0 2.6rem; }
+.section-lede:empty { display: none; }
 .section { padding: clamp(4rem, 10vw, 7.5rem) 0; position: relative; z-index: 2; }
 .section-alt { background: var(--bg-2); }
 
@@ -234,23 +235,57 @@ button, input { font-family: inherit; }
   margin: 0 0 2rem; color: var(--accent);
 }
 
-.clock { width: clamp(150px, 40vw, 210px); margin: 0 auto 2rem; }
-.clock-face { width: 100%; height: auto; display: block; filter: drop-shadow(0 0 24px var(--glow)); }
-.clock-rim   { fill: none; stroke: var(--accent-2); stroke-width: 1.5; opacity: .55; }
+.clock { position: relative; width: clamp(164px, 44vw, 232px); margin: 0 auto 2.2rem; }
+.clock::after {
+  content: ""; position: absolute; inset: -22%; border-radius: 50%;
+  background: radial-gradient(circle, var(--glow), transparent 68%);
+  animation: halo 6.5s ease-in-out infinite; pointer-events: none;
+}
+@keyframes halo { 0%, 100% { opacity: .55; transform: scale(1); } 50% { opacity: 1; transform: scale(1.09); } }
+
+.clock-face { position: relative; width: 100%; height: auto; display: block; }
+.clock-ring-outer { fill: none; stroke: var(--accent-2); stroke-width: 1; opacity: .4; }
+.clock-ring-inner { fill: none; stroke: var(--accent-2); stroke-width: 2; opacity: .75; }
 .clock-inner { fill: var(--surface); stroke: var(--line); stroke-width: 1; }
-.clock-tick  { stroke: var(--muted); stroke-width: 1.5; opacity: .5; }
-.clock-tick.major { stroke: var(--accent-2); stroke-width: 2.5; opacity: .9; }
-.clock-hand  { stroke-linecap: round; transform-origin: 100px 100px; }
-.clock-hour  { stroke: var(--text); stroke-width: 4; }
-.clock-minute{ stroke: var(--text); stroke-width: 2.5; }
-.clock-second{ stroke: var(--accent); stroke-width: 1.2; }
-.clock-pin   { fill: var(--accent-2); }
+
+.clock-tick { stroke: var(--muted); stroke-width: 1; opacity: .4; }
+.clock-tick.major { stroke: var(--accent-2); stroke-width: 2; opacity: .8; }
+
+.clock-numerals text {
+  fill: var(--accent-2); font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 15px; font-weight: 600; letter-spacing: .5px;
+  text-anchor: middle; dominant-baseline: central; opacity: .92;
+}
+
+/* one point of light going slowly round, like the hour coming for her */
+.clock-orbit { transform-origin: 100px 100px; animation: orbit 20s linear infinite; }
+.orbit-dot { fill: var(--accent-2); }
+@keyframes orbit { to { transform: rotate(360deg); } }
+
+.clock-hand { stroke-linecap: round; transform-origin: 100px 100px; }
+.clock-hour { stroke: var(--text); stroke-width: 3.6; }
+.clock-minute { stroke: var(--text); stroke-width: 2.2; }
+.clock-second { stroke: var(--accent); stroke-width: 1; opacity: .9; }
+.clock-pin-outer { fill: none; stroke: var(--accent-2); stroke-width: 1.4; opacity: .8; }
+.clock-pin { fill: var(--accent-2); }
+
+/* a thin rule with a diamond in it, under her name */
+.flourish { display: flex; align-items: center; justify-content: center; gap: .8rem; margin: -1.1rem 0 2rem; }
+.flourish i { display: block; width: clamp(34px, 12vw, 70px); height: 1px; background: linear-gradient(90deg, transparent, var(--accent-2)); opacity: .6; }
+.flourish i:last-child { background: linear-gradient(90deg, var(--accent-2), transparent); }
+.flourish span { color: var(--accent-2); font-size: .72rem; opacity: .9; }
 
 .countdown { display: flex; justify-content: center; gap: clamp(.3rem,2vw,1rem); margin-bottom: 2rem; }
 .cd-unit {
+  position: relative; overflow: hidden;
   min-width: clamp(58px, 17vw, 86px);
   background: var(--surface); border: 1px solid var(--line);
   border-radius: 14px; padding: .8rem .3rem .7rem;
+}
+.cd-unit::before {
+  content: ""; position: absolute; top: 0; left: 18%; right: 18%; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-2), transparent);
+  opacity: .7;
 }
 .cd-num {
   display: block; font-family: "Cormorant Garamond", Georgia, serif;
@@ -365,6 +400,16 @@ button, input { font-family: inherit; }
 .day.future:hover { transform: none; border-color: var(--line); }
 .day.today { border-color: var(--accent-2); box-shadow: 0 0 0 2px var(--glow); }
 .year-stats { margin-top: 2.2rem; color: var(--muted); font-size: .9rem; }
+
+.keep {
+  margin-top: 2rem; padding: 1.2rem 1.3rem;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  display: flex; flex-wrap: wrap; align-items: center; gap: .7rem 1.1rem;
+}
+.keep-words { flex: 1 1 260px; min-width: 0; }
+.keep-title { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.15rem; margin: 0 0 .2rem; }
+.keep-lede { margin: 0; font-size: .82rem; color: var(--muted); }
+.keep-actions { display: flex; gap: .5rem; flex-wrap: wrap; }
 
 /* ============================ countdowns ============================ */
 .cd-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(215px, 1fr)); gap: .9rem; }

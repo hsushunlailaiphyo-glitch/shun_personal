@@ -22,16 +22,26 @@
   <div class="gate-inner">
     <p class="gate-eyebrow" id="gate-eyebrow"></p>
     <h1 class="gate-name" id="gate-name"></h1>
+    <div class="flourish" aria-hidden="true"><i></i><span>&#10022;</span><i></i></div>
 
     <div class="clock" aria-hidden="true">
       <svg viewBox="0 0 200 200" class="clock-face">
-        <circle cx="100" cy="100" r="94" class="clock-rim"/>
-        <circle cx="100" cy="100" r="86" class="clock-inner"/>
+        <circle cx="100" cy="100" r="97" class="clock-ring-outer"/>
+        <circle cx="100" cy="100" r="91" class="clock-ring-inner"/>
+        <circle cx="100" cy="100" r="85" class="clock-inner"/>
         <g id="clock-ticks"></g>
-        <line x1="100" y1="100" x2="100" y2="52" class="clock-hand clock-hour" id="hand-hour"/>
-        <line x1="100" y1="100" x2="100" y2="34" class="clock-hand clock-minute" id="hand-min"/>
-        <line x1="100" y1="100" x2="100" y2="28" class="clock-hand clock-second" id="hand-sec"/>
-        <circle cx="100" cy="100" r="5" class="clock-pin"/>
+        <g class="clock-numerals">
+          <text x="100" y="40">XII</text>
+          <text x="160" y="100">III</text>
+          <text x="100" y="160">VI</text>
+          <text x="40"  y="100">IX</text>
+        </g>
+        <g class="clock-orbit"><circle cx="100" cy="6" r="2.4" class="orbit-dot"/></g>
+        <line x1="100" y1="110" x2="100" y2="60" class="clock-hand clock-hour" id="hand-hour"/>
+        <line x1="100" y1="113" x2="100" y2="46" class="clock-hand clock-minute" id="hand-min"/>
+        <line x1="100" y1="116" x2="100" y2="42" class="clock-hand clock-second" id="hand-sec"/>
+        <circle cx="100" cy="100" r="6.5" class="clock-pin-outer"/>
+        <circle cx="100" cy="100" r="2.8" class="clock-pin"/>
       </svg>
     </div>
 
@@ -109,6 +119,18 @@
         <div class="year-legend reveal" id="year-legend"></div>
         <div class="year-months" id="year-months"></div>
         <p class="year-stats reveal" id="year-stats"></p>
+
+        <div class="keep reveal">
+          <div class="keep-words">
+            <p class="keep-title" id="keep-title"></p>
+            <p class="keep-lede" id="keep-lede"></p>
+          </div>
+          <div class="keep-actions">
+            <button class="mini-btn solid" id="keep-save">save a copy</button>
+            <button class="mini-btn" id="keep-load">restore</button>
+            <input type="file" id="keep-file" accept="application/json,.json" hidden>
+          </div>
+        </div>
       </div>
     </section>
 

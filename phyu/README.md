@@ -69,9 +69,16 @@ her own countdowns, and keep a wish list. Everything saves **the instant she tap
 to her own device.
 
 **Right now that means one device.** Her phone and her laptop would each keep
-their own copy. `worker/SETUP.md` turns on real sync between them — about ten
-minutes of Cloudflare clicks, and the site keeps working perfectly if you never
-do it.
+their own copy.
+
+Two things guard against losing it:
+
+1. **Keep a copy** — under the year grid. *Save a copy* downloads her whole year
+   as a small file; *restore* takes it back, on any device. No accounts, works
+   even with sync switched off. Tell her about this one.
+2. **Sync** — `worker/SETUP.md`, about ten minutes of Cloudflare clicks, and her
+   phone and laptop stay in step by themselves. The site works perfectly if you
+   never set it up.
 
 The bottom of the page always says which it is: *saved on this device* or *synced*.
 

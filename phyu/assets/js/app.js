@@ -294,9 +294,10 @@
     var g = $("clock-ticks"); if (!g) return;
     var out = "";
     for (var i = 0; i < 60; i++) {
+      if (i % 15 === 0) continue;          // XII, III, VI and IX stand in for these
       var major = i % 5 === 0;
       var a = (i / 60) * Math.PI * 2;
-      var r1 = major ? 72 : 78, r2 = 82;
+      var r1 = major ? 74 : 78, r2 = 82;
       out += '<line class="clock-tick' + (major ? " major" : "") + '"' +
              ' x1="' + (100 + Math.sin(a) * r1).toFixed(1) + '" y1="' + (100 - Math.cos(a) * r1).toFixed(1) +
              '" x2="' + (100 + Math.sin(a) * r2).toFixed(1) + '" y2="' + (100 - Math.cos(a) * r2).toFixed(1) + '"/>';
@@ -399,6 +400,8 @@
     setText("music-lede", C.musicLede);
     setText("photos-title", C.photosTitle);
     setText("photos-lede", C.photosLede);
+    setText("keep-title", C.keepTitle);
+    setText("keep-lede", C.keepLede);
 
     var cl = C.closing || {};
     setText("closing-title", cl.title);
@@ -832,6 +835,69 @@
       }
       store.set("data", JSON.stringify(state));
     } catch (e) {}
+  });
+
+  /* ======================================================================
+     KEEPING A COPY
+     Her year lives on her device. This hands her a file she can put
+     anywhere, and take back later or on another phone.
+     ====================================================================== */
+  function stamp() {
+    var p = partsThere(Date.now());
+    return p.y + "-" + pad2(p.m) + "-" + pad2(p.d);
+  }
+
+  $("keep-save").addEventListener("click", function () {
+    try {
+      var blob = new Blob([JSON.stringify(state, null, 2)], { type: "application/json" });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement("a");
+      a.href = url;
+      a.download = "phyu-year-" + stamp() + ".json";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+      toast("saved to your downloads");
+    } catch (e) {
+      toast("couldn't save a copy here");
+    }
+  });
+
+  $("keep-load").addEventListener("click", function () { $("keep-file").click(); });
+
+  $("keep-file").addEventListener("change", function () {
+    var file = this.files && this.files[0];
+    this.value = "";                       // so the same file can be picked twice
+    if (!file) return;
+
+    var reader = new FileReader();
+    reader.onload = function () {
+      var doc;
+      try { doc = JSON.parse(reader.result); } catch (e) { doc = null; }
+      if (!doc || typeof doc !== "object" || Array.isArray(doc) || !("moods" in doc)) {
+        toast("that doesn't look like one of your copies");
+        return;
+      }
+      var days = Object.keys(doc.moods || {}).length;
+      var mine = Object.keys(state.moods || {}).length;
+      var ok = window.confirm(
+        "Restore " + days + (days === 1 ? " day" : " days") + " from this file?\n\n" +
+        "What's on this device now (" + mine + (mine === 1 ? " day" : " days") + ") will be replaced."
+      );
+      if (!ok) return;
+
+      var b = blankState();
+      for (var k in b) if (!(k in doc)) doc[k] = b[k];
+      state = doc;
+      state.updatedAt = Date.now();        // this copy is now the current one
+      try { store.set("data", JSON.stringify(state)); } catch (e) {}
+      queuePush();
+      renderAll();
+      toast("your year is back");
+    };
+    reader.onerror = function () { toast("couldn't read that file"); };
+    reader.readAsText(file);
   });
 
   /* ---------------------------- reveal ---------------------------- */

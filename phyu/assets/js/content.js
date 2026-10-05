@@ -90,6 +90,10 @@ const CONTENT = {
   yearTitle: "the book of your year",
   yearLede: "Every day you answer, a square lights up. By next 10/10 this is a whole year of you, in colour. Tap any day gone by to fill it in late — nothing is ever closed to you.",
 
+  /* The quiet line under the year grid that lets her keep a copy. */
+  keepTitle: "keep a copy",
+  keepLede: "Your year is saved on this device the moment you tap. This hands you a copy of it to keep somewhere safe.",
+
   /* ---------------- 7. COUNTDOWNS ---------------- */
   countdownTitle: "until the next good thing",
   countdownLede: "Going home. The end of exams. A comeback. Tell the clock what you're waiting for and it will count the days so you don't have to.",
@@ -109,7 +113,7 @@ const CONTENT = {
   /* ---------------- 9. NOTES ----------------
      ✏️ REPLACE these three. Three or four sentences each is plenty.      */
   notesTitle: "letters from your loves",
-  notesLede: "Short, because term started again. True, because we meant every word of them.",
+  notesLede: "",
 
   notes: [
     {
