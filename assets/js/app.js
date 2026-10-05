@@ -69,6 +69,15 @@
   var BD = C.birthday || { month: 9, day: 28 };
   var DAY_MS = 86400000;
 
+  // The moment the gift opens, once and for all. Without this the gate came
+  // back every year, so a new phone — or a cleared browser — would show a
+  // countdown to the NEXT birthday instead of the site.
+  function revealAt() {
+    if (REVEAL_AT === null) REVEAL_AT = midnightThere(C.revealYear || 2026, BD.month, BD.day);
+    return REVEAL_AT;
+  }
+  var REVEAL_AT = null;
+
   // The next (or currently running) birthday window.
   function window_(now) {
     var y = yearThere(now);
@@ -200,9 +209,9 @@
       var now = Date.now();
       var w = window_(now);
 
-      if (now >= w.start) { openSite(true, true); return; }
+      if (now >= revealAt()) { openSite(true, true); return; }
 
-      var left = w.start - now;
+      var left = revealAt() - now;
       var d = Math.floor(left / DAY_MS);
       var h = Math.floor(left / 3600000) % 24;
       var m = Math.floor(left / 60000) % 60;
@@ -618,14 +627,9 @@
   /* ======================================================================
      GO
      ====================================================================== */
-  var now = Date.now();
-  var w = window_(now);
-  var alreadyOpened = store.get("unlocked") === "1";
-  var itsHerBirthday = now >= w.start && now < w.end;
-
   if (PREVIEW) {
     openSite(false, false);          // a look, not an unlock — leaves no trace
-  } else if (alreadyOpened || itsHerBirthday) {
+  } else if (Date.now() >= revealAt() || store.get("unlocked") === "1") {
     openSite(false, true);
   } else {
     startGate();

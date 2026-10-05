@@ -28,6 +28,11 @@ const CONTENT = {
   birthYear: 2002,
   timezone: "Asia/Tokyo",   // countdown unlocks at midnight in Japan
 
+  /* The year the gift was given. Once that midnight passed, the site is open
+     for good on any device — the gate is a one-time reveal, not a lock that
+     returns every year. Don't change this. */
+  revealYear: 2026,
+
   /* Pick the starting colour theme. She can change it herself with the
      "colours" button in the top-right corner, and it remembers her choice.
 
