@@ -379,17 +379,14 @@
     setText("hero-sub", h.subtitle);
     $("hero-body").innerHTML = paras(h.body);
 
-    $("hero-nav").innerHTML = [
-      { href: "#today",    label: "today" },
-      { href: "#year",     label: "your year" },
-      { href: "#counting", label: "countdowns" },
-      { href: "#wishes",   label: "wishes" },
-      { href: "#notes",    label: "notes" },
-      { href: "#music",    label: "music" }
-    ].map(function (n) { return '<a href="' + n.href + '">' + esc(n.label) + "</a>"; }).join("");
+    $("hero-nav").innerHTML = (C.nav || []).map(function (n) {
+      return '<a href="' + n.href + '">' + esc(n.label) + "</a>";
+    }).join("");
 
     setText("today-title", C.todayTitle);
     setText("today-lede", C.todayLede);
+    setText("today-mood-panel", C.todayMoodPanel);
+    setText("today-habit-panel", C.todayHabitPanel);
     setText("year-title", C.yearTitle);
     setText("year-lede", C.yearLede);
     setText("cd-title", C.countdownTitle);

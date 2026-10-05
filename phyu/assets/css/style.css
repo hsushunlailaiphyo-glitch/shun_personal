@@ -18,7 +18,8 @@
   --line:      rgba(255, 255, 255, 0.13);
   --glow:      rgba(143, 184, 232, 0.26);
   --shadow:    0 30px 70px rgba(0, 0, 0, 0.5);
-  --sparkle:   0.5;
+  --sparkle:   0.95;
+  --shimmer:   0.55;
   color-scheme: dark;
 }
 
@@ -35,7 +36,8 @@
   --line:      rgba(22, 33, 63, 0.14);
   --glow:      rgba(120, 165, 225, 0.4);
   --shadow:    0 26px 60px rgba(60, 100, 170, 0.16);
-  --sparkle:   0.35;
+  --sparkle:   0.55;
+  --shimmer:   0.3;
   color-scheme: light;
 }
 
@@ -52,7 +54,8 @@
   --line:      rgba(58, 35, 48, 0.14);
   --glow:      rgba(240, 180, 200, 0.42);
   --shadow:    0 26px 60px rgba(180, 110, 140, 0.16);
-  --sparkle:   0.35;
+  --sparkle:   0.55;
+  --shimmer:   0.3;
   color-scheme: light;
 }
 
@@ -69,7 +72,8 @@
   --line:      rgba(61, 46, 18, 0.14);
   --glow:      rgba(240, 205, 130, 0.45);
   --shadow:    0 26px 60px rgba(170, 130, 50, 0.15);
-  --sparkle:   0.4;
+  --sparkle:   0.6;
+  --shimmer:   0.3;
   color-scheme: light;
 }
 
@@ -86,7 +90,8 @@
   --line:      rgba(47, 36, 73, 0.14);
   --glow:      rgba(195, 170, 245, 0.42);
   --shadow:    0 26px 60px rgba(120, 90, 190, 0.15);
-  --sparkle:   0.35;
+  --sparkle:   0.55;
+  --shimmer:   0.3;
   color-scheme: light;
 }
 
@@ -103,7 +108,8 @@
   --line:      rgba(16, 53, 58, 0.14);
   --glow:      rgba(145, 215, 220, 0.42);
   --shadow:    0 26px 60px rgba(30, 130, 140, 0.15);
-  --sparkle:   0.35;
+  --sparkle:   0.55;
+  --shimmer:   0.3;
   color-scheme: light;
 }
 
@@ -143,20 +149,56 @@ img { max-width: 100%; display: block; }
 
 button, input { font-family: inherit; }
 
-/* a faint drift of light, like dust in a ballroom */
-.sparkle-layer {
-  position: fixed; inset: 0; z-index: 1; pointer-events: none;
-  opacity: var(--sparkle);
+/* Dust in a ballroom: two layers of light at different speeds, each one
+   breathing. Kept to CSS gradients so it costs nothing to run. */
+/* Above the gate (500) so the first thing she sees has dust in the air too,
+   but below the letter overlays (600) so reading is never speckled. */
+.sparkle-layer { position: fixed; inset: -10%; z-index: 550; pointer-events: none; opacity: var(--sparkle); }
+.sparkle-layer::before,
+.sparkle-layer::after { content: ""; position: absolute; inset: 0; }
+
+.sparkle-layer::before {
   background-image:
-    radial-gradient(1.5px 1.5px at 20% 30%, var(--accent-2), transparent),
-    radial-gradient(1.5px 1.5px at 70% 60%, var(--accent), transparent),
-    radial-gradient(1px 1px at 45% 80%, var(--accent-2), transparent),
-    radial-gradient(1px 1px at 85% 20%, var(--accent), transparent),
-    radial-gradient(1.5px 1.5px at 10% 70%, var(--accent), transparent);
-  background-size: 700px 700px, 560px 560px, 480px 480px, 620px 620px, 540px 540px;
-  animation: drift 90s linear infinite;
+    radial-gradient(2px 2px at 12% 18%, var(--accent-2), transparent 60%),
+    radial-gradient(1.5px 1.5px at 34% 62%, var(--accent), transparent 60%),
+    radial-gradient(2.5px 2.5px at 58% 28%, var(--accent-2), transparent 55%),
+    radial-gradient(1.5px 1.5px at 76% 72%, var(--accent), transparent 60%),
+    radial-gradient(2px 2px at 90% 36%, var(--accent-2), transparent 58%),
+    radial-gradient(1px 1px at 22% 86%, var(--accent), transparent 60%),
+    radial-gradient(1.5px 1.5px at 66% 92%, var(--accent-2), transparent 60%);
+  background-size: 620px 620px;
+  animation: drift 110s linear infinite, twinkle 7s ease-in-out infinite;
 }
-@keyframes drift { to { background-position: 700px 700px, -560px 560px, 480px -480px, -620px -620px, 540px 540px; } }
+
+.sparkle-layer::after {
+  background-image:
+    radial-gradient(1px 1px at 8% 44%, var(--accent), transparent 60%),
+    radial-gradient(1.5px 1.5px at 28% 8%, var(--accent-2), transparent 58%),
+    radial-gradient(1px 1px at 48% 78%, var(--accent), transparent 60%),
+    radial-gradient(2px 2px at 70% 14%, var(--accent-2), transparent 55%),
+    radial-gradient(1px 1px at 84% 58%, var(--accent), transparent 60%),
+    radial-gradient(1.5px 1.5px at 96% 88%, var(--accent-2), transparent 58%),
+    radial-gradient(1px 1px at 40% 34%, var(--accent-2), transparent 60%);
+  background-size: 430px 430px;
+  animation: drift-back 74s linear infinite, twinkle 4.6s ease-in-out infinite 1.4s;
+}
+
+@keyframes drift      { to { background-position: 620px 620px; } }
+@keyframes drift-back { to { background-position: -430px 430px; } }
+@keyframes twinkle    { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
+
+/* a slow shimmer across the dark themes, like light moving over a gown */
+.site::before, .gate::before {
+  content: ""; position: fixed; inset: -40% -20%; z-index: 0; pointer-events: none;
+  background: radial-gradient(ellipse 42% 34% at 50% 50%, var(--glow), transparent 70%);
+  opacity: var(--shimmer, 0); filter: blur(42px);
+  animation: wander 46s ease-in-out infinite alternate;
+}
+@keyframes wander {
+  0%   { transform: translate(-16%, -8%) scale(1); }
+  50%  { transform: translate(10%, 12%) scale(1.18); }
+  100% { transform: translate(18%, -6%) scale(.95); }
+}
 
 /* shared type */
 .eyebrow {

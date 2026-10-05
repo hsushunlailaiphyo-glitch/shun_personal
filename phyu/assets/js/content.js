@@ -39,32 +39,47 @@ const CONTENT = {
 
   /* ---------------- 3. THE COUNTDOWN SCREEN ---------------- */
   gate: {
-    eyebrow: "the clock is counting down for",
-    note: "in the story, midnight ends the magic.\nhere it starts it. come back on the 10th.",
+    eyebrow: "the clock is striking for",
+    note: "in the story, midnight takes the magic away.\nhere, it brings it. come back on the tenth.",
     signature: "— shun, nann & sutaki",
   },
 
   /* ---------------- 4. THE FIRST SCREEN ---------------- */
   hero: {
-    eyebrow: "october 10",
+    eyebrow: "the tenth of october",
     title: "Phyu Phway",
     subtitle: "twenty-four, and a ten out of ten",
     body: [
-      "Born on 10/10, which we think explains a lot.",
-      "This isn't only a card. It's a small place to keep track of your year — your days, your countdowns, the things you want. It's yours now, and it stays open all year.",
+      "Born on 10/10, which we have always thought explains a great deal.",
+      "This isn't only a card. It's a small room with your name on the door — somewhere to keep your days, your countdowns, and the things you're still reaching for.",
+      "The clock has struck, and nothing here disappears at midnight. It's yours now, all year.",
     ],
   },
 
+  /* The six buttons under her name. Order follows the page. */
+  nav: [
+    { href: "#today",    label: "today" },
+    { href: "#year",     label: "your year" },
+    { href: "#counting", label: "countdowns" },
+    { href: "#wishes",   label: "goals" },
+    { href: "#notes",    label: "letters" },
+    { href: "#music",    label: "music" },
+  ],
+
   /* ---------------- 5. TODAY ---------------- */
   todayTitle: "today",
-  todayLede: "Two taps. That's the whole thing.",
+  todayLede: "Two taps and today is written down. That's all it ever asks of you.",
+
+  /* The two little headings on this screen. */
+  todayMoodPanel: "how did today feel?",
+  todayHabitPanel: "small promises",
 
   /* The five moods. Keep five — the colours are built around it. */
   moods: [
-    { id: 1, name: "rough" },
-    { id: 2, name: "low" },
-    { id: 3, name: "okay" },
-    { id: 4, name: "good" },
+    { id: 1, name: "stormy" },
+    { id: 2, name: "grey" },
+    { id: 3, name: "quiet" },
+    { id: 4, name: "lovely" },
     { id: 5, name: "magic" },
   ],
 
@@ -72,12 +87,12 @@ const CONTENT = {
   startingHabits: ["water", "sleep", "self care", "study"],
 
   /* ---------------- 6. HER YEAR ---------------- */
-  yearTitle: "your year, one square at a time",
-  yearLede: "Every day you answer, a square fills in. By next 10/10 this is a picture of your whole year. Tap any past day to fill it in late.",
+  yearTitle: "the book of your year",
+  yearLede: "Every day you answer, a square lights up. By next 10/10 this is a whole year of you, in colour. Tap any day gone by to fill it in late — nothing is ever closed to you.",
 
   /* ---------------- 7. COUNTDOWNS ---------------- */
-  countdownTitle: "what you're waiting for",
-  countdownLede: "Add anything — going home, the end of exams, a comeback. It counts down for you.",
+  countdownTitle: "until the next good thing",
+  countdownLede: "Going home. The end of exams. A comeback. Tell the clock what you're waiting for and it will count the days so you don't have to.",
 
   /* ✏️ Seed a few if you know real dates. Dates are YYYY-MM-DD. */
   startingCountdowns: [
@@ -85,16 +100,16 @@ const CONTENT = {
   ],
 
   /* ---------------- 8. WISHES ---------------- */
-  wishTitle: "things you want from this year",
-  wishLede: "Not a to-do list. The bigger things. Tick them off when they happen.",
-  wishEmpty: "nothing here yet — what do you want this year to hold?",
+  wishTitle: "the things you're reaching for",
+  wishLede: "Not a list of errands — the bigger ones. Tick them off as they come true.",
+  wishEmpty: "nothing here yet. what do you want this year to hold?",
 
   startingWishes: [],
 
   /* ---------------- 9. NOTES ----------------
      ✏️ REPLACE these three. Three or four sentences each is plenty.      */
-  notesTitle: "three people wanted to say something",
-  notesLede: "Short, because school started again. True, because we meant it.",
+  notesTitle: "letters from your loves",
+  notesLede: "Short, because term started again. True, because we meant every word of them.",
 
   notes: [
     {
@@ -139,14 +154,14 @@ const CONTENT = {
      so nothing ever looks broken.
 
      ✏️ I picked these without knowing her taste. Swap freely.            */
-  musicTitle: "something to put on",
-  musicLede: "One side Disney, one side SEVENTEEN.",
+  musicTitle: "something for the ballroom",
+  musicLede: "One side Disney, one side SEVENTEEN. Put it on and let it run.",
 
   musicDisneyHead: "disney",
   musicDisney: [
     { title: "A Dream Is a Wish Your Heart Makes", artist: "Cinderella",            youtubeId: "" },
-    { title: "So This Is Love",                    artist: "Cinderella",            youtubeId: "" },
-    { title: "When You Wish Upon a Star",          artist: "Pinocchio",             youtubeId: "" },
+    { title: "A Whole New World",                  artist: "Aladdin",               youtubeId: "" },
+    { title: "Let It Go",                          artist: "Frozen",                youtubeId: "" },
     { title: "Part of Your World",                 artist: "The Little Mermaid",    youtubeId: "" },
     { title: "Beauty and the Beast",               artist: "Beauty and the Beast",  youtubeId: "" },
   ],
@@ -165,7 +180,7 @@ const CONTENT = {
        { src: "photos/phyu-01.jpg", caption: "okayama, spring" },
      Set emptySlots to 0 once you have real photos in.                     */
   photosTitle: "us",
-  photosLede: "Proof.",
+  photosLede: "Proof that the story is real.",
   emptySlots: 6,
   photos: [
   ],
@@ -174,7 +189,7 @@ const CONTENT = {
   closing: {
     title: "happy birthday, phyu phway",
     body: [
-      "This doesn't expire. Come back on an ordinary Tuesday. It will still be here, filling up, and so will we.",
+      "This one doesn't expire at midnight. Come back on an ordinary Tuesday, or at two in the morning. It will still be here, filling up, and so will we.",
     ],
     signature: "— shun, nann & sutaki",
   },

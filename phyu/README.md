@@ -88,3 +88,18 @@ The bottom of the page always says which it is: *saved on this device* or *synce
   offline, can't wipe more recent entries.
 - **Six themes**: midnight (Cinderella at the ball), glass, carat (SEVENTEEN's
   rose quartz & serenity), belle, rapunzel, ariel. All checked for readability.
+- **The sparkle sits above the countdown** but below the letters, so the first
+  screen has dust in the air and reading a letter never does.
+
+## The sections, and what they're called in content.js
+
+| On the page | In the file |
+|---|---|
+| today | `todayTitle`, `todayMoodPanel`, `todayHabitPanel`, `moods`, `startingHabits` |
+| the book of your year | `yearTitle`, `yearLede` |
+| until the next good thing | `countdownTitle`, `startingCountdowns` |
+| the things you're reaching for (**goals**) | `wishTitle`, `wishEmpty`, `startingWishes` |
+| letters from your loves (**letters**) | `notesTitle`, `notes` |
+| something for the ballroom | `musicDisney`, `musicSvt` |
+
+The six buttons under her name are the `nav:` list — rename or reorder freely.
