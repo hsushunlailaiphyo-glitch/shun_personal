@@ -111,7 +111,12 @@ const CONTENT = {
   startingWishes: [],
 
   /* ---------------- 9. NOTES ----------------
-     ✏️ REPLACE these three. Three or four sentences each is plenty.      */
+     ✏️ REPLACE these three. Three or four sentences each is plenty.
+
+     A letter can carry photos too — add a line like:
+         photos: ["photos/phyu-nann-1.webp"],
+     Put the files in phyu/photos first. They show full width under the
+     letter, at their own proportions.                                     */
   notesTitle: "letters from your loves",
   notesLede: "",
 
@@ -135,13 +140,20 @@ const CONTENT = {
     {
       from: "Nann",
       role: "your friend",
-      preview: "✏️ replace me.",
+      preview: "I never call anyone Princess except Pann Wai \u2014 but you are my princess.",
       body: [
-        "Phyu,",
-        "✏️ REPLACE THIS.",
-        "Happy birthday.",
+        "To my Dearest Phyu Phway ly,",
+        "I wish you the happiest birthday. It's your 2nd birthday we have spent together. One thing I'm sure of is that I love you very much and I always feel like you are my sister from another mother. And I am also very proud of being your best friend.",
+        "You are very pretty, cute, smart, well-planned and hardworking, kind-hearted and I wonder if there's anyone who doesn't admire you. I honestly love you so much and I even doubted myself of being a lesbian lol.",
+        "I feel sorry for being harsh with you about your bf. But I want you to know that I want to give you **THE VERY BEST THING** in this world.",
+        "I never call anyone Princess except Pann Wai but you are my princess. I want to take care of you and some pretty flowers, good food, pretty clothes remind me of you. I'd spend every penny I have on you, and I wouldn't even think twice about it.",
+        "You are very precious to me and I'm scared we have to be apart when we graduate.",
+        "I love you so much my princess. Let's get old together. Happy birthday my pretty princess.",
       ],
       signature: "nann wai",
+      photos: [
+        "photos/phyu-nann-1.webp",
+      ],
     },
     {
       from: "Sutaki",

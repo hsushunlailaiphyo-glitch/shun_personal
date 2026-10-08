@@ -750,6 +750,16 @@
     setText("reader-eyebrow", "a note from " + (n.from || ""));
     setText("reader-title", n.from || "");
     $("reader-body").innerHTML = paras(n.body);
+
+    var rp = $("reader-photos");
+    rp.innerHTML = (n.photos || []).filter(Boolean).map(function (src) {
+      return '<img src="' + esc(src) + '" alt="" loading="lazy">';
+    }).join("");
+    // a mistyped filename should vanish, not leave a broken icon in a letter
+    Array.prototype.forEach.call(rp.querySelectorAll("img"), function (img) {
+      img.addEventListener("error", function () { img.remove(); });
+    });
+
     setText("reader-sign", n.signature ? "— " + n.signature : "");
     $("reader").hidden = false;
     document.body.classList.add("locked");

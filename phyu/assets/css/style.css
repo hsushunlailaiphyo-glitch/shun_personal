@@ -544,6 +544,11 @@ button, input { font-family: inherit; }
 .reader-body p { margin: 0 0 1.2rem; white-space: pre-line; }
 .reader-body em { color: var(--accent); font-style: italic; }
 .reader-body strong { color: var(--accent); font-weight: 700; }
+/* photos under a letter: full width, their own proportions, never cropped */
+.reader-photos { display: flex; flex-direction: column; gap: .8rem; margin-top: 2rem; }
+.reader-photos:empty { display: none; }
+.reader-photos img { width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); }
+
 .reader-sign { font-family: "Caveat", cursive; font-size: 1.6rem; color: var(--accent); margin: 1.8rem 0 0; }
 
 .lb-figure { position: relative; margin: 0; max-width: min(1000px,100%); animation: readerin .45s cubic-bezier(.22,.61,.36,1) both; }
