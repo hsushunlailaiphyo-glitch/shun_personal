@@ -136,6 +136,9 @@ const CONTENT = {
         "I love you. Always.",
       ],
       signature: "shun",
+      photos: [
+        "photos/phyu-shun-1.jpg",
+      ],
     },
     {
       from: "Nann",
