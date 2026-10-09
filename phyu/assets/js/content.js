@@ -226,8 +226,13 @@ const CONTENT = {
      Set emptySlots to 0 once you have real photos in.                     */
   photosTitle: "us",
   photosLede: "Proof that the story is real.",
-  emptySlots: 6,
+  emptySlots: 0,
   photos: [
+    { src: "photos/phyu-us-1.jpg", caption: "between classes" },
+    { src: "photos/phyu-us-2.jpg", caption: "waiting on the food, as always" },
+    { src: "photos/phyu-us-3.jpg", caption: "the four of us, in the sea" },
+    { src: "photos/phyu-us-4.jpg", caption: "the sleepovers that turned into a tradition" },
+    { src: "photos/phyu-us-5.jpg", caption: "walking home, late" },
   ],
 
   /* ---------------- 12. THE LAST THING ---------------- */
