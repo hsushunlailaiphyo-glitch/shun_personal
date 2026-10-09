@@ -1,0 +1,9 @@
+{
+  // Tells Cloudflare: this is a plain website, just serve these files.
+  // No build step, no code to run. You should never need to edit this.
+  "name": "ten-out-of-ten",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "."
+  }
+}
