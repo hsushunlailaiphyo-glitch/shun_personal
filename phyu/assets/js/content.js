@@ -233,6 +233,12 @@ const CONTENT = {
     { src: "photos/phyu-us-3.jpg", caption: "the four of us, in the sea" },
     { src: "photos/phyu-us-4.jpg", caption: "the sleepovers that turned into a tradition" },
     { src: "photos/phyu-us-5.jpg", caption: "walking home, late" },
+    { src: "photos/phyu-us-6.jpg", caption: "four heads on one blanket" },
+    { src: "photos/phyu-us-7.jpg", caption: "thingyan in okayama" },
+    { src: "photos/phyu-us-8.jpg", caption: "studying, allegedly" },
+    { src: "photos/phyu-us-9.jpg", caption: "flash on, august" },
+    { src: "photos/phyu-us-10.jpg", caption: "the back row, mid-lecture" },
+    { src: "photos/phyu-us-11.jpg", caption: "all dressed up" },
   ],
 
   /* ---------------- 12. THE LAST THING ---------------- */
